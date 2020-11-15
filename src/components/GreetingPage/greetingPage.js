@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
+import Greet from "../Greet/Greet";
 
 const hi = {
     textAlign: "center",
@@ -15,10 +16,7 @@ const wave = {
 const GreetingPage = () => {
     const { who = "nobody" } = useParams();
     return (
-        <div>
-            <h1 style={hi}>Hello, {who}!</h1>
-            <h1 style={wave}>{"\uD83D\uDC4B"}</h1>
-        </div>
+        <Greet name={who}/>
     );
 }
 
